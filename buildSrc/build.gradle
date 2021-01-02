@@ -1,0 +1,12 @@
+plugins {
+    id 'groovy-gradle-plugin'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation group: 'org.jetbrains.kotlin', name: 'kotlin-gradle-plugin', version: '1.3.72'
+    implementation group: 'io.qameta.allure', name: 'allure-gradle', version: '2.8.1'
+}

@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm'
+    id 'io.qameta.allure'
+    id 'myproject.global-conventions'
+}
+
+def cucumberVersion = '6.9.1'
+def allureCucumberJvmVersion = '2.13.8'
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: junitVersion
+    testCompile group: 'io.cucumber', name: 'cucumber-junit', version: cucumberVersion
+    testCompile group: 'io.cucumber', name: 'cucumber-core', version: cucumberVersion
+    testCompile group: 'io.cucumber', name: 'cucumber-spring', version: cucumberVersion
+    testImplementation group: 'io.cucumber', name: 'cucumber-java', version: cucumberVersion
+
+    testCompile group: 'io.qameta.allure', name: 'allure-cucumber6-jvm', version: allureCucumberJvmVersion
+
+    testCompile group: 'org.springframework', name: 'spring-core', version: springVersion
+    testCompile group: 'org.springframework', name: 'spring-test', version: springVersion
+    testCompile group: 'org.springframework', name: 'spring-context', version: springVersion
+    testCompile group: 'org.springframework', name: 'spring-beans', version: springVersion
+
+    testCompile group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion
+    testCompile group: 'ch.qos.logback', name: 'logback-classic', version: logbackVersion
+    testCompile group: 'ch.qos.logback', name: 'logback-core', version: logbackVersion
+
+    testImplementation group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jdk8'
+
+    testImplementation project(':testing-config')
+}

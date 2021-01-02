@@ -1,0 +1,41 @@
+plugins {
+    id 'myproject.test-conventions'
+}
+
+dependencies {
+    implementation project(':library4test')
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+task cucumber() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            systemProperty("allure.results.directory", "build/allure-results")
+
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            jvmArgs = [
+                    "-DLOG_DIR=${getProject().getBuildDir().getPath()}",
+                    "-Dcucumber.publish.quiet=true"
+            ]
+            args = [
+                    '--plugin', 'pretty',
+                    '--plugin', 'io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm',
+                    '--glue', 'com.github.rmatafonov.functionaltesting.stepdefs',
+                    'classpath:com/github/rmatafonov/functionaltesting/features'
+            ]
+        }
+    }
+}
+
+allure {
+    version = '2.13.8'
+    autoconfigure = true
+    aspectjweaver = true
+}
