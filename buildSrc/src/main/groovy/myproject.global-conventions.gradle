@@ -9,6 +9,7 @@ version '1.0-SNAPSHOT'
 ext {
     junitVersion = '4.12'
     springVersion = '5.2.11.RELEASE'
+    springBootVersion = '2.3.7.RELEASE'
     slf4jVersion = '1.7.15'
     logbackVersion = '1.1.3'
 }

@@ -21,6 +21,7 @@ dependencies {
     testCompile group: 'org.springframework', name: 'spring-test', version: springVersion
     testCompile group: 'org.springframework', name: 'spring-context', version: springVersion
     testCompile group: 'org.springframework', name: 'spring-beans', version: springVersion
+    testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion
 
     testCompile group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion
     testCompile group: 'ch.qos.logback', name: 'logback-classic', version: logbackVersion
