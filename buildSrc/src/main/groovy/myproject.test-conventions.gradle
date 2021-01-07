@@ -6,6 +6,7 @@ plugins {
 }
 
 def cucumberVersion = '6.9.1'
+def assertjVersion = '3.18.1'
 def allureCucumberJvmVersion = '2.13.8'
 
 dependencies {
@@ -22,6 +23,8 @@ dependencies {
     testCompile group: 'org.springframework', name: 'spring-context', version: springVersion
     testCompile group: 'org.springframework', name: 'spring-beans', version: springVersion
     testCompile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: springBootVersion
+
+    testImplementation group: 'org.assertj', name: 'assertj-core', version: assertjVersion
 
     testCompile group: 'org.slf4j', name: 'slf4j-api', version: slf4jVersion
     testCompile group: 'ch.qos.logback', name: 'logback-classic', version: logbackVersion
