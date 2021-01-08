@@ -56,6 +56,6 @@ Execute the task **`cucumber`** from the module **`functional-testing`** <br>
         1.3 Give correct names to modules in settings.gradle <br>
     2. Rename modules directories accordingly (with Ctrl + F6 for IntelliJ IDEA) 
 * Kotlin:
-    * Version 1.3.72 is used as the most stable for 08-Jan-2021
+    * Version **`1.3.72`** is used as the most stable for 08-Jan-2021
     * Don't ignore Gradle output with warnings about incompatible versions
-        * E.g. jackson-module-kotlin:2.12.x uses Kotlin 1.4.x - so for Kotlin 1.3.72 jackson-module-kotlin:2.11.x has to be used
+        * E.g. **`jackson-module-kotlin:2.12.x`** uses Kotlin **`1.4.x`** - so for Kotlin 1.3.72 **`jackson-module-kotlin:2.11.x`** has to be used
