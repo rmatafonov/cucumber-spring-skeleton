@@ -26,6 +26,9 @@ https://docs.gradle.org/current/samples/sample_jvm_multi_project_with_additional
             * service-b-client
             * db-scheme-b-common
 
+* Module library4test
+    * All the testing configs are here
+
 #### Running tests
 Execute the task **`cucumber`** from the module **`functional-testing`** <br>
 * Default test environment is **`dev`**
@@ -34,7 +37,7 @@ Execute the task **`cucumber`** from the module **`functional-testing`** <br>
 
 #### Reporting
 * Yandex Allure engine is used
-* After all tests run execute task **`allureReport`** from the module **`functional-testing`**:
+* After all tests execute task **`allureReport`** from the module **`functional-testing`**:
     * Report will be generated in the folder **`functional-testing/build/reports/allure-report`**
 * A server like **`jetty`** is required for standalone report display
     * Possible to see a report with IntelliJ IDEA build-in server:
@@ -47,8 +50,12 @@ Execute the task **`cucumber`** from the module **`functional-testing`** <br>
 * Rename **`myproject.library-conventions.gradle`** as you need, probably just **`library-conventions.gradle`** is acceptable accordingly to Gradle documentation
 * Rename **`myproject.test-conventions.gradle`** as you need, probably just **`test-conventions.gradle`** is acceptable accordingly to Gradle documentation
 * Order of renaming:
-    1. Rename root project
-        1.1 Rename the directory before opening the project
-        1.2 Rename **`rootProject.name`** in settings.gradle
-        1.3 Give correct names to modules in settings.gradle
+    1. Rename root project <br>
+        1.1 Rename the directory before opening the project <br>
+        1.2 Rename **`rootProject.name`** in settings.gradle <br>
+        1.3 Give correct names to modules in settings.gradle <br>
     2. Rename modules directories accordingly (with Ctrl + F6 for IntelliJ IDEA) 
+* Kotlin:
+    * Version 1.3.72 is used as the most stable for 08-Jan-2021
+    * Don't ignore Gradle output with warnings about incompatible versions
+        * E.g. jackson-module-kotlin:2.12.x uses Kotlin 1.4.x - so for Kotlin 1.3.72 jackson-module-kotlin:2.11.x has to be used
