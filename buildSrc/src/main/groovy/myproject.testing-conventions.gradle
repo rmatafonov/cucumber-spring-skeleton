@@ -33,4 +33,5 @@ dependencies {
     testImplementation group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jdk8'
 
     testImplementation project(':testing-config')
+    implementation project(':spring-utils')
 }

@@ -1,0 +1,9 @@
+plugins {
+    id 'myproject.library-conventions'
+}
+
+def reflectionsVersion = '0.9.12'
+
+dependencies {
+    compile group: 'org.reflections', name: 'reflections', version: reflectionsVersion
+}

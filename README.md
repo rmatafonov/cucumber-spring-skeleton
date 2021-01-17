@@ -47,14 +47,21 @@ Execute the task **`cucumber`** from the module **`functional-testing`** <br>
 #### Notes
 * Stepdefs are in Java as there is no accurate Cucumber for Kotlin plugin for IntelliJ IDEA right now (02-jan-2021)
 * Please use appropriate directories for your Java, Kotlin, etc code
+* Rename **`myproject.testing-library-conventions.gradle`** as you need, probably just **`testing-library-conventions.gradle`** is acceptable accordingly to Gradle documentation
 * Rename **`myproject.library-conventions.gradle`** as you need, probably just **`library-conventions.gradle`** is acceptable accordingly to Gradle documentation
-* Rename **`myproject.test-conventions.gradle`** as you need, probably just **`test-conventions.gradle`** is acceptable accordingly to Gradle documentation
+* Rename **`myproject.testing-conventions.gradle`** as you need, probably just **`testing-conventions.gradle`** is acceptable accordingly to Gradle documentation
+* **`myproject.testing-library-conventions.gradle`** vs **`myproject.library-conventions.gradle`**:
+    * **`myproject.testing-library-conventions.gradle`** is for testing-related modules like:
+        * Client for a service
+        * DB access module
+    * **`myproject.library-conventions.gradle`** is for modules that provides features for tests implementation
 * Order of renaming:
     1. Rename root project <br>
         1.1 Rename the directory before opening the project <br>
-        1.2 Rename **`rootProject.name`** in settings.gradle <br>
-        1.3 Give correct names to modules in settings.gradle <br>
-    2. Rename modules directories accordingly (with Ctrl + F6 for IntelliJ IDEA) 
+        1.2 Open the project <br>
+        1.3 Rename **`rootProject.name`** in settings.gradle <br>
+        1.4 Give correct names to modules in settings.gradle <br>
+    2. Rename modules directories accordingly (with Shift+F6 for IntelliJ IDEA) 
 * Kotlin:
     * Version **`1.3.72`** is used as the most stable for 08-Jan-2021
     * Don't ignore Gradle output with warnings about incompatible versions

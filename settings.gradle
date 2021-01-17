@@ -2,4 +2,5 @@ rootProject.name = 'cucumber-spring-skeleton'
 include 'functional-testing'
 include 'library4test'
 include 'testing-config'
+include 'spring-utils'
 
